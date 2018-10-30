@@ -16,12 +16,8 @@ public class FPRunner {
 		numberList.add(4);
 		numberList.add(7);
 		numberList.add(9);
-
-		int sum = numberList.stream().reduce(0, (num1, num2) -> num1 + num2);
-
-		int sumOfOdd = numberList.stream().filter(num -> num % 2 == 1).reduce(0, (num1, num2) -> num1 + num2);
-
-		System.out.println("Sum: " + sum + ", Sum of odd:" + sumOfOdd);
+		System.out.println("Number list: ");
+		numberList.stream().forEach(e -> System.out.print(e + " "));
 
 		IntStream.range(0, 10).map(element -> element * element).forEach(element -> System.out.println(element));
 
@@ -29,6 +25,11 @@ public class FPRunner {
 		list.add("Apple");
 		list.add("Ant");
 		list.add("Bat");
+		list.add("Cat");
+		System.out.println();
+		list.stream().filter(e -> e.endsWith("at")).forEach(e -> System.out.print(e + " "));
+
+		System.out.println();
 
 		// List.of("Apple", "Ant", "Bat")
 		list.stream().map(element -> element.toLowerCase()).forEach(element -> System.out.println(element));
