@@ -15,11 +15,14 @@ public class DirectoryScannerRunner {
 		// Files.list(currentDirectory).forEach(System.out::println);
 
 		Predicate<? super Path> predicate = path -> String.valueOf(path).endsWith(".java");
-		// Files.walk(currentDirectory,
-		// 5).filter(predicate).forEach(System.out::println);
+		// Files.walk(currentDirectory, 5).filter(predicate).forEach(System.out::println);
 
-		BiPredicate<Path, BasicFileAttributes> matcher = (path, attributes) -> String.valueOf(path).contains(".java");
-		Files.find(currentDirectory, 4, matcher).forEach(System.out::println);
+		BiPredicate<Path, BasicFileAttributes> javaMatcher = (path, attributes) -> String.valueOf(path).contains(".java");
+		
+		BiPredicate<Path, BasicFileAttributes> directoryMatcher = (path, attributes) -> attributes.isDirectory();
+
+		// Files.find(currentDirectory, 4, javaMatcher).forEach(System.out::println);
+		Files.find(currentDirectory, 4, directoryMatcher).forEach(System.out::println);
 	}
 
 }
