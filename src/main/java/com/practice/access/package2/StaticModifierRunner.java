@@ -10,6 +10,18 @@ class Player {
 		return;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public static void setCount(int count) {
+		Player.count = count;
+	}
+
 	public static int getCount() {
 		return count;
 	}
