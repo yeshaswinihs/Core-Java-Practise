@@ -57,6 +57,10 @@ public class MapRunner {
 
 		System.out.println(stringCountMap);
 
+		for (Map.Entry<String, Integer> entry : stringCountMap.entrySet()) {
+			System.out.println(entry.getClass() + " " + entry.getKey() + "->" + entry.getValue());
+		}
+
 	}
 
 }
