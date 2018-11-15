@@ -1,6 +1,6 @@
 package com.practice.collection;
 
-class Client {
+class Client implements Cloneable {
 	private int id;
 
 	Client(int id) {
@@ -41,17 +41,28 @@ class Client {
 		return true;
 	}
 
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+
 }
 
 public class EqualsRunner {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		Client c1 = new Client(1);
 		Client c2 = new Client(1);
 		Client c3 = new Client(2);
+		Client c4 = (Client) c1.clone();
 
 		System.out.println(c1.equals(c2));
 		System.out.println(c1.equals(c3));
+		System.out.println(c1.equals(c4));
+		System.out.println(c1);
+		System.out.println(c2);
+		System.out.println(c3);
+		System.out.println(c4);
 
 	}
 
