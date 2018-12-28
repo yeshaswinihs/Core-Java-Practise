@@ -15,14 +15,22 @@ public class FPNumberRunner {
 
 		int sum = numberList.stream().reduce(0, (num1, num2) -> num1 + num2);
 
-		System.out.println("Sum: " + sum);
+		// System.out.println("Sum: " + sum);
 
 		int sumOfOdd = numberList.stream().filter(num -> num % 2 == 1).reduce(0, (num1, num2) -> {
-			System.out.println(num1 + " " + num2);
+			// System.out.println(num1 + " " + num2);
 			return num1 + num2;
 		});
 
-		System.out.println("Sum of odd: " + sumOfOdd);
+		// System.out.println("Sum of odd: " + sumOfOdd);
+
+		List<Integer> list = new ArrayList<>();
+		for (int i = 0; i < 1000; i++) {
+			list.add(i);
+		}
+		list.stream().forEach(i -> System.out.print(i + " "));
+		// /list.stream().forEach(i -> System.out.print(i + " "));
+		// list.parallelStream().forEach(i -> System.out.print(i + " "));
 
 	}
 

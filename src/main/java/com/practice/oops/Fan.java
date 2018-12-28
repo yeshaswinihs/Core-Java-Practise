@@ -1,5 +1,9 @@
 package com.practice.oops;
 
+/**
+ * @author 734456
+ *
+ */
 public class Fan {
 
 	private String name;
@@ -8,6 +12,11 @@ public class Fan {
 	private boolean isOn;
 	private byte speed;
 
+	/**
+	 * @param name
+	 * @param radius
+	 * @param color
+	 */
 	public Fan(String name, double radius, String color) {
 		this.name = name;
 		this.radius = radius;
@@ -23,6 +32,9 @@ public class Fan {
 		this.setSpeed((byte) 0);
 	}
 
+	/**
+	 * @param speed
+	 */
 	public void setSpeed(byte speed) {
 		this.speed = speed;
 	}

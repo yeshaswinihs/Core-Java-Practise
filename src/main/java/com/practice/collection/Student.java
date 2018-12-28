@@ -31,4 +31,9 @@ public class Student extends Object implements Comparable<Student> {
 		return Integer.compare(that.id, this.id);
 	}
 
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + "]";
+	}
+
 }

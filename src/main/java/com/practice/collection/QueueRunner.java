@@ -17,6 +17,7 @@ public class QueueRunner {
 
 	public static void main(String[] args) {
 		Queue<String> animals = new PriorityQueue<>(new StringLengthComparator());
+		// Queue<String> animals = new PriorityQueue<>();
 		animals.add("Dog");
 		animals.add("Zebra");
 		animals.add("Horse");

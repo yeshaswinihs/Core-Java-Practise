@@ -33,7 +33,14 @@ public class StringRunner {
 		System.out.println(test.hashCode());
 
 		StringBuffer bufferStr = new StringBuffer("Buffer String");
+		System.out.println(bufferStr.hashCode());
 		bufferStr.append(" Appended");
+		System.out.println(bufferStr.hashCode());
+
+		String str1 = "Buffer String";
+		System.out.println(str1.hashCode());
+		str1 = str1 + " Appended";
+		System.out.println(str1.hashCode());
 
 		Integer number1 = new Integer(5);
 		Integer number2 = new Integer(5);
@@ -43,5 +50,6 @@ public class StringRunner {
 
 		System.out.println(number1 == number2);
 		System.out.println(number3 == number4);
+
 	}
 }

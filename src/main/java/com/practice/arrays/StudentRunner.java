@@ -20,6 +20,12 @@ public class StudentRunner {
 		pradeep.addNewMark(95);
 		nithin.removeMarkAtIndex(2);
 
+		byte a = 127;
+		System.out.println(++a);
+		/*
+		 * while (a > 0) { a++; System.out.println(a); }
+		 */
+
 		for (Student student : students) {
 			int number = student.getNumberOfMarks();
 			int sum = student.getTotalSumOfMarks();

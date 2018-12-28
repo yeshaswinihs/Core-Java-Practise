@@ -1,5 +1,9 @@
 package com.practice.access;
 
+/**
+ * @author 734456
+ *
+ */
 public class ExampleClass {
 
 	private void privateMethod() {

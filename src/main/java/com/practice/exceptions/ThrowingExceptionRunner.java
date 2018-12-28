@@ -17,6 +17,11 @@ public class ThrowingExceptionRunner {
 
 class CurrenciesDoNoMatchException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9197651435554391780L;
+
 	public CurrenciesDoNoMatchException(String msg) {
 		super(msg);
 	}

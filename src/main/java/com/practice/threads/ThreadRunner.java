@@ -41,8 +41,8 @@ public class ThreadRunner {
 		task2Thread.setPriority(10);
 		task2Thread.start();
 
-		task1.join();
-		task2Thread.join();
+		// task1.join();
+		// task2Thread.join();
 
 		// Task 3
 		System.out.println("\nTask 3 started..");

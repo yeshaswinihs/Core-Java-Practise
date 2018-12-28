@@ -33,7 +33,12 @@ public class StudentCollectionRunnner {
 		students.add(jagath);
 		students.add(pradeep);
 		students.add(nithin);
-
+		students.stream().forEach(System.out::print);
+		System.out.println();
+		students.stream().forEachOrdered(System.out::print);
+		System.out.println();
+		students.iterator().forEachRemaining(System.out::print);
+		System.out.println();
 		List<Integer> ids = new ArrayList<>();
 		ids.add(12);
 		ids.add(11);
@@ -56,7 +61,21 @@ public class StudentCollectionRunnner {
 		}
 
 		System.out.println("\nAscending");
+		System.out.println("ID Comparator");
 		Collections.sort(students, new AscendingStudentComparator());
+		for (Student student : students) {
+			System.out.print(" - " + student.getId() + " - " + student.getName());
+		}
+		// Using Lambda
+		// ID Comparator
+		System.out.println("\nID Comparator using lambda");
+		Collections.sort(students, (var1, var2) -> var1.getId() - var2.getId());
+		for (Student student : students) {
+			System.out.print(" - " + student.getId() + " - " + student.getName());
+		}
+		// Name Comparator
+		System.out.println("\nName Comparator using lambda");
+		Collections.sort(students, (var1, var2) -> var1.getName().compareTo(var2.getName()));
 		for (Student student : students) {
 			System.out.print(" - " + student.getId() + " - " + student.getName());
 		}

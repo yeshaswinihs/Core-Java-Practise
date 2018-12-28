@@ -1,6 +1,7 @@
 package com.practice.collection;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -22,9 +23,13 @@ public class SetRunner {
 		characters.add('Z');
 
 		// Unique Elements
-		Set<Character> hashSet = new LinkedHashSet<>(characters);
+		Set<Character> hashSet = new HashSet<>(characters);
 		System.out.println(hashSet);
 
+		for (Character ch : hashSet) {
+			System.out.print(ch);
+		}
+		System.out.println();
 		// Sorted Unique Elements
 		TreeSet<Character> treeSet = new TreeSet<>(characters);
 		System.out.println(treeSet);
