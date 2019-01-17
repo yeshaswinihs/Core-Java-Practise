@@ -37,6 +37,8 @@ public class ListRunner {
 			System.out.println(iterator.next());
 		}
 
+		System.out.println(iterator.next());
+
 		List<Integer> numbers = new ArrayList<>();
 		numbers.add(101);
 		numbers.add(103);

@@ -16,23 +16,52 @@ public class CopyOnWriteArrayListRunner {
 		// It follows Fail-Safe by design
 		// List<String> list = new CopyOnWriteArrayList<>();
 
-		list.add("Ant");
+		// list.add("Ant");
 		list.add("Bat");
 		list.add("Cat");
+		// list.add("Rat");
 
 		Iterator<String> iterator = list.iterator();
-		int counter = 0;
+		int counter = -1;
 		while (iterator.hasNext()) {
 			counter++;
-			if (list.contains("Bat")) {
-				System.out.println("Removing element..");
-				list.remove(1);
-				list.add("Rat");
-			}
 			System.out.println(counter);
-			System.out.println(iterator.next());
+			// iterator.remove();
+			// System.out.println(iterator.next());
+			// if (list.contains("Bat")) {
+				// System.out.println("Adding element..");
+				// list.add("Rat");
+				// list.remove(1);
+				// iterator.remove();
+				// System.out.println("Element added..");
+			// }
+
+			System.out.println(list);
+			String str = iterator.next();
+			System.out.println("Elemenet : " + str);
+
+			if (str.equals("Bat")) {
+				// iterator.remove();
+				list.remove(0);
+				// list.add("Rat");
+
+			}
+
+			System.out.println("List after removing in Iteration: " + counter + " List: " + list);
+
+
+			// System.out.println(iterator.next());
 		}
-		System.out.println(list);
+
+		System.out.println("List after removing: " + list);
+
+		/*for (String str : list) {
+			if (str.equals("Bat")) {
+				list.remove(str);
+			}
+		}*/
+
+		// System.out.println(list);
 
 	}
 
