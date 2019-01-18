@@ -14,7 +14,7 @@ public class MethodReferenceRunner {
 		list.add("Cat");
 
 		System.out.println("\nLength of strings in the list:");
-		list.stream().map(String::length).forEach(System.out::print);
+		list.stream().map(String::length).forEach(System.out::println);
 
 		List<Integer> numberList = new ArrayList<>();
 		numberList.add(23);
@@ -22,13 +22,15 @@ public class MethodReferenceRunner {
 		numberList.add(34);
 		numberList.add(53);
 
-		Optional<Integer> max = numberList.stream().filter(new MethodReferenceRunner()::isEven).max(Integer::compare);
+		// Optional<Integer> max = numberList.stream().filter(new
+		// MethodReferenceRunner()::isEven).max(Integer::compare);
+		Optional<Integer> max = numberList.stream().filter(MethodReferenceRunner::isEven).max(Integer::compare);
 		System.out.println();
 		System.out.println(max.get());
 
 	}
 
-	boolean isEven(Integer num) {
+	static boolean isEven(Integer num) {
 		return num % 2 == 0;
 	}
 

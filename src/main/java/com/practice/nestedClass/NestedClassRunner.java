@@ -8,11 +8,15 @@ public class NestedClassRunner {
 
 	int i;
 
+	static int k = 5;
+
 	class InnerClass {
 
 		public void method() {
 			i = 5;
+			k++;
 		}
+
 	}
 
 	static class StaticNestedClass {

@@ -11,7 +11,7 @@ public class Amount {
 
 	}
 
-	public void add(Amount that) throws CurrenciesDoNoMatchException {
+	public void add(Amount that) {
 
 		if (!this.currency.equalsIgnoreCase(that.currency)) {
 			throw new CurrenciesDoNoMatchException("Currencies do not match..");

@@ -11,7 +11,7 @@ public class StringRunner {
 		System.out.println(str.substring(6));
 		System.out.println(str.substring(3, 5));
 		for (int i = 0; i < str.length(); i++) {
-			System.out.println(str.charAt(i));
+			System.out.print(str.charAt(i));
 		}
 		System.out.println(str.indexOf("l"));
 		System.out.println(str.indexOf("World"));
@@ -50,6 +50,27 @@ public class StringRunner {
 
 		System.out.println(number1 == number2);
 		System.out.println(number3 == number4);
+
+		String a = "Hello";
+		String b = "Hello";
+		String c = new String("Hello");
+
+		System.out.println("a: " + a);
+		System.out.println("b: " + b);
+
+		System.out.println("System.identityHashCode(a): " + System.identityHashCode(a));
+		System.out.println("System.identityHashCode(b): " + System.identityHashCode(b));
+		System.out.println("System.identityHashCode(c): " + System.identityHashCode(c));
+		
+		System.out.println("a.hashCode(): " + a.hashCode());
+		System.out.println("b.hashCode(): " + b.hashCode());
+		System.out.println("c.hashCode(): " + c.hashCode());
+
+
+		System.out.println("a.equals(b)" + a.equals(b));
+
+		System.out.println("(a == b) " + (a == b));
+		System.out.println("(a == c) " + (a == c));
 
 	}
 }
