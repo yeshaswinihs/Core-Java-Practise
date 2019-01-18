@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Stream;
 
 class DescendingStudentComparator implements Comparator<Student> {
 
@@ -33,9 +34,19 @@ public class StudentCollectionRunnner {
 		students.add(jagath);
 		students.add(pradeep);
 		students.add(nithin);
-		students.stream().forEach(System.out::print);
+
+		// System.out.println(students);
+
+		// Collections.sort(students);
+
+		// System.out.println(students);
+
+		Stream<Student> stream = students.stream();
+		stream.forEach(System.out::print);
+		System.out.println("Using Stream again");
+		stream.forEach(System.out::print);
 		System.out.println();
-		students.stream().forEachOrdered(System.out::print);
+		stream.forEachOrdered(System.out::print);
 		System.out.println();
 		students.iterator().forEachRemaining(System.out::print);
 		System.out.println();

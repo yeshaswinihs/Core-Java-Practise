@@ -28,12 +28,14 @@ public class Student extends Object implements Comparable<Student> {
 
 	@Override
 	public int compareTo(Student that) {
-		return Integer.compare(that.id, this.id);
+		//return Integer.compare(that.id, this.id);
+		return this.name.compareTo(that.name);
+		
 	}
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + "]";
+		return "[name=" + name + "]";
 	}
 
 }

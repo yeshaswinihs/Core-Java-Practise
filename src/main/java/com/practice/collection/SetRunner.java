@@ -58,6 +58,13 @@ public class SetRunner {
 		Set<Character> linkedHashSet = new LinkedHashSet<>(characters);
 		System.out.println(linkedHashSet);
 
+		TreeSet<Employee> employees = new TreeSet<>();
+		employees.add(new Employee(1, "Pradeep"));
+		employees.add(new Employee(3, "Nithin"));
+		employees.add(new Employee(2, "Jagath"));
+		employees.add(new Employee(2, "Jagath"));
+		System.out.println(employees);
+
 	}
 
 }
