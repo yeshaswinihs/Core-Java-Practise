@@ -1,7 +1,11 @@
 package com.practice.access.package2;
 
-import com.practice.access.ExampleClass;
+import com.practice.access.package1.ExampleClass;
 
+/**
+ * @author 734456
+ *
+ */
 public class MethodAccessRunnerInDifferentPackage {
 
 	public static void main(String[] args) {

@@ -3,6 +3,7 @@ package com.practice.dates;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.Period;
 
 public class DateRunner {
 	public static void main(String[] args) {
@@ -14,6 +15,10 @@ public class DateRunner {
 		System.out.println(localDate.isLeapYear());
 		System.out.println(localDate.lengthOfMonth());
 		System.out.println(localDate.toEpochDay());
+
+		Period period = Period.ofDays(1);
+
+		System.out.println(localDate.plus(period));
 
 		LocalDateTime localDateTime = LocalDateTime.now();
 		System.out.println(localDateTime);

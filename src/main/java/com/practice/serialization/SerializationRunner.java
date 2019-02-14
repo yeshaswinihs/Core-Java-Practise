@@ -9,7 +9,7 @@ public class SerializationRunner {
 
 		String fileName = "TestSerialization.ser";
 
-		// Employee pradeep = new Employee("Pradeep", 1, "dummy", 10000);
+		// Employee pradeep = new Employee("Pradeep", 1/* , "dummy" */, 10000);
 
 		// SerializationUtil.serialize(pradeep, fileName);
 

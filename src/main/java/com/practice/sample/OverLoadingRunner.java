@@ -5,6 +5,9 @@ public class OverLoadingRunner {
 	public static void main(String[] args) {
 
 		sum(new Integer(10));
+		sum(10.0);
+		sum(10);
+		sum(10.00);
 
 		long a = 10;
 		float b = 3;
@@ -27,6 +30,16 @@ public class OverLoadingRunner {
 	static void sum(Integer a) {
 		System.out.println("Integer");
 	}
+
+	static void sum(double a) {
+		System.out.println("double");
+	}
+
+	static void sum(float a) {
+		System.out.println("float");
+	}
+
+
 
 }
 

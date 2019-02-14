@@ -6,6 +6,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 
+/**
+ * @author 734456
+ *
+ */
 public class ListRunner {
 
 	public static void main(String[] args) {
@@ -16,10 +20,29 @@ public class ListRunner {
 		System.out.println("Wild Animals -> ");
 		wildAnimals.stream().filter(var1 -> var1.startsWith("T")).forEach(System.out::println);
 
-		List<String> petAnimals = new LinkedList<>();
+		List petAnimals = new LinkedList<>();
 		petAnimals.add("Cow");
 		petAnimals.add("Dog");
 		petAnimals.add("Cat");
+		
+		Iterator itr = petAnimals.iterator();
+		
+		while(itr.hasNext()){
+			System.out.println(itr.next());
+		}
+		
+		/*for(Object obj:itr){
+			
+			System.out.println(obj);
+			
+		}*/
+		
+		Boolean a = Boolean.valueOf("tRue");
+		Boolean b = Boolean.valueOf("TRUE");
+		Boolean c = Boolean.valueOf(true);
+
+		System.out.println(a + " bbbb " + b + " ccc " + c);
+
 		petAnimals.remove(1);
 		System.out.println("Pet Animals -> ");
 		petAnimals.stream().forEach(var1 -> System.out.println(var1));
