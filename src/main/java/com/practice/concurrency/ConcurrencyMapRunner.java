@@ -12,17 +12,22 @@ public class ConcurrencyMapRunner {
 		ConcurrentMap<Character, LongAdder> occurences = new ConcurrentHashMap<>();
 		String str = "ABCD ABCD ABCD";
 
+
 		for (Character character : str.toCharArray()) {
 			occurences.computeIfAbsent(character, ch -> new LongAdder()).increment();
-
-			/*
-			 * LongAdder longAdder = occurences.get(ch); if (longAdder == null)
-			 * { longAdder = new LongAdder(); } longAdder.increment();
-			 * occurences.put(character, longAdder);
-			 */
 		}
+		occurences.forEach((var1, var2) -> System.out.println(var1.toString() + " " + var2.intValue()));
 
-		System.out.println(occurences);
+		/*
+		 * LongAdder longAdder = occurences.get(ch); if (longAdder == null) {
+		 * longAdder = new LongAdder(); } longAdder.increment();
+		 * occurences.put(character, longAdder);
+		 */
+
+
+		/* System.out.println(occurences); */
+
+
 
 	}
 
