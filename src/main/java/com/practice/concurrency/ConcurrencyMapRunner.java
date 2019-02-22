@@ -18,14 +18,18 @@ public class ConcurrencyMapRunner {
 		}
 		occurences.forEach((var1, var2) -> System.out.println(var1.toString() + " " + var2.intValue()));
 
-		/*
-		 * LongAdder longAdder = occurences.get(ch); if (longAdder == null) {
-		 * longAdder = new LongAdder(); } longAdder.increment();
-		 * occurences.put(character, longAdder);
-		 */
 
+		/*Alternative Approach
+		 * for (Character character : str.toCharArray()) {
+			LongAdder longAdder = occurences.get(character);
+			if (longAdder == null) {
+				longAdder = new LongAdder();
+			}
+			longAdder.increment();
+			occurences.put(character, longAdder);
+		}
 
-		/* System.out.println(occurences); */
+		System.out.println(occurences); */
 
 
 
