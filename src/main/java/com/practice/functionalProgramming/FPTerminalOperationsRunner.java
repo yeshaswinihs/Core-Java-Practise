@@ -28,5 +28,8 @@ public class FPTerminalOperationsRunner {
 		// Intstream will not return stream hence boxing is required
 		List<Integer> squareOfNumbers = IntStream.range(1, 11).map(e -> e * e).boxed().collect(Collectors.toList());
 		squareOfNumbers.stream().forEach(n -> System.out.print(n + " "));
+
+		int[] intArray = { 10, 20, 30 };
+
 	}
 }
