@@ -11,6 +11,8 @@ public class Employee implements Serializable {
 	private String password;
 	transient private int salary;
 
+	Student student;
+
 	public Employee(String name, int id, String password, int salary) {
 		super();
 		this.name = name;

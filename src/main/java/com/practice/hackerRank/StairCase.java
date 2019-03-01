@@ -19,6 +19,7 @@ public class StairCase {
 
 	static void staircase(int n) {
 		for (int i = 0; i < n; i++) {
+			// Prints empty spaces
 			for (int j = 0; j < n - i - 1; j++) {
 				System.out.print(" ");
 			}
