@@ -27,9 +27,9 @@ class Display3 {
 		;
 		;
 		;// Few lines of code
-			// Object level synchronization
-			// synchronized (this) {
-			// Class level synchronization
+		// Object level synchronization
+		// synchronized (this) {
+		// Class level synchronization
 		synchronized (Display3.class) {
 			for (int i = 0; i < 10; i++) {
 				System.out.print("Good Morning: ");

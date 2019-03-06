@@ -1,6 +1,6 @@
 package com.practice.threads;
 
-public class A {
+public class C {
 
 	synchronized void m1() {
 		System.out.println("method m1" + Thread.currentThread().getName());
@@ -18,38 +18,38 @@ public class A {
 	}
 
 	public static void main(String[] args) {
-		A a = new A(); // shared resource
-		Task4 task4 = new Task4(a);
+		C c = new C(); // shared resource
+		Task4 task4 = new Task4(c);
 		task4.setName("Task4");
 		task4.start();
-		Task5 task5 = new Task5(a);
+		Task5 task5 = new Task5(c);
 		task5.start();
 		task5.setName("Task5");
 	}
 }
 
 class Task4 extends Thread {
-	A a;
+	C c;
 
-	Task4(A a) {
-		this.a = a;
+	Task4(C c) {
+		this.c = c;
 	}
 
 	@Override
 	public void run() {
-		a.m1();
+		c.m1();
 	}
 }
 
 class Task5 extends Thread {
-	A a;
+	C c;
 
-	Task5(A a) {
-		this.a = a;
+	Task5(C c) {
+		this.c = c;
 	}
 
 	@Override
 	public void run() {
-		a.m1();
+		c.m1();
 	}
 }
