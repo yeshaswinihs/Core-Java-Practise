@@ -1,4 +1,4 @@
-package com.practice.designPatterns;
+package com.practice.designPatterns.singleton;
 
 public class SingletonRunner {
 
