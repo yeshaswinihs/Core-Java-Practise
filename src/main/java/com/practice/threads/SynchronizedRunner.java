@@ -4,8 +4,8 @@ public class SynchronizedRunner {
 
 	public static void main(String[] args) {
 
-		Display display = new Display();
-
+		/*Display display = new Display();
+		
 		MyThread t1 = new MyThread(display, "Rahul");
 		MyThread t2 = new MyThread(display, "Rohit");
 		MyThread t3 = new MyThread(display, "Dhawan");
@@ -13,6 +13,16 @@ public class SynchronizedRunner {
 		t1.start();
 		t2.start();
 		t3.start();
+*/		
+		Display d1 = new Display();
+		Display d2 = new Display();
+		
+		MyThread t1 = new MyThread(d1, "Rahul");
+		MyThread t2 = new MyThread(d2, "Rohit");
+		
+		t1.start();
+		t2.start();
+
 	}
 
 }
