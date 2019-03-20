@@ -20,7 +20,6 @@ class EvenNumberConsumer implements Consumer<Integer> {
 	@Override
 	public void accept(Integer var1) {
 		System.out.print(var1 + " ");
-
 	}
 
 }

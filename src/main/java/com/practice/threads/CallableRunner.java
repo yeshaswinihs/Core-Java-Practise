@@ -17,6 +17,15 @@ class CallableTask implements Callable<String> {
 	@Override
 	public String call() throws Exception {
 		Thread.sleep(1000);
+		try {
+
+			if (this.name.equals("Snapdeal")) {
+				throw new RuntimeException("Snapdeal is not supported!");
+
+			}
+		} catch (Exception e) {
+			return null;
+		}
 		return "Welcome to " + name;
 	}
 

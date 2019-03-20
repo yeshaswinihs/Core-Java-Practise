@@ -43,7 +43,16 @@ public class ThreadRunner {
 		Thread task2Thread = new Thread(task2);
 		task2Thread.start();
 
+		Runnable r = () -> {
+			System.out.println("\nTask 4 started..");
+			for (int i = 401; i < 499; i++) {
+				System.out.print(i + " ");
+			}
+			System.out.println("\nEnd of Task 4..");
+		};
 
+		Thread task4 = new Thread(r);
+		task4.start();
 
 		// Task 3
 
@@ -53,8 +62,10 @@ public class ThreadRunner {
 		}
 		System.out.println("\nEnd of Task 3..");
 
-		task1.join();
+		// task1.join();
 		// task2Thread.join();
+
+
 
 
 		System.out.println("\nEnd of Main");

@@ -42,13 +42,19 @@ public class StudentCollectionRunnner {
 		// System.out.println(students);
 
 		Stream<Student> stream = students.stream();
-		stream.forEach(System.out::print);
-		System.out.println("Using Stream again");
-		stream.forEach(System.out::print);
+		// stream.forEach(System.out::print);
+		System.out.println("\nUsing Stream again");
+		// stream.forEach(System.out::print);
 		System.out.println();
-		stream.forEachOrdered(System.out::print);
+		Stream.of("AAA", "BBB", "CCC").parallel().forEachOrdered(System.out::print);
 		System.out.println();
-		students.iterator().forEachRemaining(System.out::print);
+		Stream.of("AAA", "BBB", "CCC").parallel().forEach(System.out::print);
+		System.out.println();
+		students.forEach(System.out::print);
+		System.out.println();
+		Iterator itr = students.iterator();
+		itr.next();
+		itr.forEachRemaining(System.out::print);
 		System.out.println();
 		List<Integer> ids = new ArrayList<>();
 		ids.add(12);
@@ -109,5 +115,6 @@ public class StudentCollectionRunnner {
 		for (Integer id : ids) {
 			System.out.print(" - " + id);
 		}
+
 	}
 }

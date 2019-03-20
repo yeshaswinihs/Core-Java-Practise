@@ -18,13 +18,24 @@ public class MethodReferenceRunner {
 
 		List<Integer> numberList = new ArrayList<>();
 		numberList.add(23);
-		numberList.add(12);
+		numberList.add(null);
 		numberList.add(34);
 		numberList.add(53);
 
-		// Optional<Integer> max = numberList.stream().filter(new
-		// MethodReferenceRunner()::isEven).max(Integer::compare);
-		Optional<Integer> max = numberList.stream().filter(MethodReferenceRunner::isEven).max(Integer::compare);
+		Integer number = 5;
+		Optional<Integer> optionalNumber = Optional.of(number);
+		
+		// Using Optional to check if a list has null elements
+		Optional<Integer> max = numberList.stream()
+				.map(num -> Optional.of(num))
+				.filter(Optional::isPresent)
+				.map(Optional::get)
+				.filter(MethodReferenceRunner::isEven)
+				.max(Integer::compare);
+		
+		
+		Optional<Integer> maxNumber = numberList.stream().filter(obj -> obj != null)
+				.filter(MethodReferenceRunner::isEven).max(Integer::compare);
 		System.out.println();
 		System.out.println(max.get());
 
