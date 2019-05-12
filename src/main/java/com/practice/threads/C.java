@@ -22,9 +22,22 @@ public class C {
 		Task4 task4 = new Task4(c);
 		task4.setName("Task4");
 		task4.start();
+		try {
+			task4.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Task5 task5 = new Task5(c);
-		task5.start();
 		task5.setName("Task5");
+		task5.start();
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println(Thread.currentThread().getName());
+			
+		}
+		System.out.println("End of main method");
+		
 	}
 }
 
@@ -37,7 +50,14 @@ class Task4 extends Thread {
 
 	@Override
 	public void run() {
-		c.m1();
+		try {
+			Thread.sleep(100);
+			c.m1();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
 
