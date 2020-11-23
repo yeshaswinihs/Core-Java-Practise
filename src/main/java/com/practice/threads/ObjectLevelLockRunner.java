@@ -18,6 +18,7 @@ class Display2 {
 
 	public synchronized void displayNumbers() {
 		for (int i = 1; i < 11; i++) {
+
 			System.out.print(i);
 			try {
 				Thread.sleep(1000);
@@ -30,6 +31,7 @@ class Display2 {
 	public synchronized void displayCharacters() {
 		for (int i = 65; i < 76; i++) {
 			System.out.print((char) i);
+
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {

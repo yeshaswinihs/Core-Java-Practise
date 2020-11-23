@@ -8,25 +8,27 @@ public class ClassLevelLockRunner {
 
 		MyThread1 t1 = new MyThread1(d1, "Rahul");
 		MyThread1 t2 = new MyThread1(d2, "Rohit");
-
+		// MyThread1 t3 = new MyThread1(d1, "yes");
 		t1.start();
+		// t3.start();
 		t2.start();
 
 	}
 }
 
 class Display1 {
+
 	// Class level lock is used to synchronized the method across all the
 	// objects of a class
 	// Method should be declared as static synchronized
 	static synchronized public void wish(String name) {
 		for (int i = 0; i < 10; i++) {
 			System.out.print("Good Morning: ");
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+//			try {
+//				Thread.sleep(1000);
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
 			System.out.println(name);
 		}
 	}

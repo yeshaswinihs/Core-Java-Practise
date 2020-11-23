@@ -39,19 +39,19 @@ public class ExecutorServiceRunner {
 		// executorService.execute(new Task1());
 		// executorService.execute(new Thread(new Task2()));
 
-		// executorService.execute(new Task(1));
+	 executorService.execute(new Task(1));
 		// executorService.execute(new Task(2));
 		// executorService.submit(new Task(3));
 		// executorService.execute(new Task(4));
 		// executorService.execute(new Task(5));
 		// executorService.execute(new Task(6));
 
-		// Creating 100 threads at a time
-		for (int i = 1; i < 101; i++) {
-			executorService.execute(new Task(i));
-		}
+//		// Creating 100 threads at a time
+//		for (int i = 1; i < 101; i++) {
+//			executorService.execute(new Task(i));
+//		}
 
-		executorService.shutdown();
+		//executorService.shutdown();
 
 	}
 

@@ -6,11 +6,12 @@ public class InterThreadCommRunner {
 
 		MyThread5 t = new MyThread5();
 		t.start();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		synchronized (t) {
 			System.out.println("Main thread calls wait()..");
 			t.wait(100); // Maximum wait time.
 		}
+
 		// t.join();
 		System.out.println("Main thread gets total..");
 		System.out.println(t.getTotal());
@@ -37,12 +38,10 @@ class MyThread5 extends Thread {
 			System.out.println("Child thread completes calculating total..");
 			this.notify();
 		}
-		/*try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
+		/*
+		 * try { Thread.sleep(1000); } catch (InterruptedException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); }
+		 */
 	}
 
 }
